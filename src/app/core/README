@@ -36,3 +36,7 @@ But /Promises/. I think the solution is that the value of the state can be a pro
 Then in React componetn or selector or wherever, you can natively use whether the promise is resolved, pending, or thrown.
 
 in React, there's something sick called "suspense." can't wait for it.
+
+
+
+make my own redux-observable middleware that's library agnostic SO FUCKING GOOD YES

@@ -1,0 +1,45 @@
+
+Unit, semantic, idiomatic, discrete-actions.
+
+--> changed my mind. componensts (containers) should import reusuable "workflows"
+container doesn't know/care if the workflow is just a discrete action or a
+kick off to a complicated async workflow.
+
+nah changed again. componetns always use atomic actions. /simple/. works with sagas + epics too.
+
+The heart of an action is in its "type" (name)..
+
+
+
+
+The critical point is that an action is semantic, unitized, atomic
+and completely context agnostic.
+
+All actions are global, not specific to a reducer/state-slice.
+Must be carefully named, must be unique. This is almost like an enum.
+"Types", but should have been called "names"
+
+
+
+keeping as a folder because that makes it symmetric to reducers.... but really should just be a single file?
+
+Actions are /verbs/. just like git commits. they're an instruction, a command to /do something/. keep with the philosophy of funtional programming; verbs > nouns. actions have /weight/, might correspond to a simple user story, an /idea/ that the application wants to /do/ something.
+
+The reason why this is a folder of strings is because actions have /weight/. Actions /shouldn't/ belong to just one 'domain,' it's context agnostic. Maybe a group of actions are 'similar,' but it should feel like each one is individual and /unique/.
+
+folders vs exporting an object are parallel when it comes to implementation/refactoring. Using default exports instead is more in line with my style of JavaScript: unnamed (anonymous), dynamic typing.
+
+named exports are good for when you consolidate a set of things into a /group/, and then clients of your module can selectively import 'named' items from the whole export. However, actions are not meant to be grouped or consolidated. Each one stands completely on its own.
+
+
+ACTIONS SHOULD NOT KNOW WHAT "STATE" IS (?????)
+no "set, get, update" crap.
+those are ONLY allowed when from the /users/ (or workflow, whatever)'s perspective, the verb "getsetupdatedelete" /means/ something. "add todo", yeah makes sense, user pressing a button.
+
+So yes, often the user is 'aware' of the data they are trying to manipulate. in which case, it makes sense to name the action to something that implies it is modifying/interacting with data/state.
+
+I think using immutableJS is a good way to handle state because it makes all state 'mutations' immutable-semantic. push, slice become immutable, and 'setting' fields of an object are also (more or less) semantic. and regular object-modifying wasn't semantic in the first place, so immutable isn't bad. just requires a good utility-'container/connector' component interface between redux and the view-components.
+
+
+as much as possible, do not domain-ize actions. don't think of actions as modifiying an object, that's OOP. not the point of actions, you're limiting the power, flexibility, and /simplicity/ of actions if you do that.
+

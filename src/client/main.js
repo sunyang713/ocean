@@ -1,9 +1,12 @@
 // webpack in here only
 
 import Application from './Application'
+// import polyfill from './polyfill'
 
 // possibly webpack the HMR process
 (function main() {
+
+  // polyfill()
 
   // Instantiate an Application.
   const application = new Application(process.env.SOURCE) // webpack injected

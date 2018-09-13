@@ -1,0 +1,10 @@
+universal code in here.
+
+can straight up import app and you're good to go.
+
+
+components are react components (markup, 'view').
+
+core is the 'core' engine of the app. it's 'state management,' but also a lot more than that. the underlying works.
+
+
