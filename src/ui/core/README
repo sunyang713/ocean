@@ -1,0 +1,18 @@
+maybe a different name. 'principles,' 'aesthetic,' 'foundation,'
+
+
+
+the point of this folder is to house the /principles/ of my ui. completely implementation/tech agnostic (as much as possible)
+
+
+should just be some 'configuraiton/variables' of colours, font choices, typography, spacing,
+
+all the 'numbers' and 'values.'
+
+
+then the 'implementations' will use this package to build their files.
+
+
+
+use ini or yaml?
+

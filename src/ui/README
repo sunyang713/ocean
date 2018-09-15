@@ -1,0 +1,65 @@
+this 'libary/package' first and foremost is a package of /principles/, patterns, designs, guidelines. then comes the implementation (css, stylus, react comps, etc...)
+
+
+
+
+
+
+
+so this might be the 'library' package of reusable components. possibly useable in a completely different website, so that's why it's at the very top, completely on its own.
+
+though this will probaby rely on styles too. mabye they'll get put together...? intersering.
+
+need a good name. probably an element. carbon-ui, silicon-ui, cesium-ui, style-ui, ocean-ui,
+
+black-ui
+
+white-ui
+
+
+
+
+
+possblye use rollup
+
+
+
+
+will styles & components be seaparate npm (package.json) packages?
+
+
+
+
+components/react
+componets/vue
+components/......????????
+
+all component variations depend on styles....
+
+
+import { thing } from 'ui/react'
+import 'ui/css'
+import 'ui/styl'
+
+
+@import 'ui/stylus'
+
+
+and then the scss version...
+
+
+
+
+
+
+
+should there be components/ styles/ 'abstract' folder at the bottom? framework stuff vs componentized stuff?
+
+
+
+
+
+
+
+
+

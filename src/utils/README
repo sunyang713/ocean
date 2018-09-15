@@ -1,3 +1,6 @@
 Universal javascript utilities go here.
 
 Must be environment agnostic, completely statless, functional.
+
+
+this package/libary should have /minimal/ dependencies.

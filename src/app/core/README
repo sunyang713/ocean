@@ -40,3 +40,11 @@ in React, there's something sick called "suspense." can't wait for it.
 
 
 make my own redux-observable middleware that's library agnostic SO FUCKING GOOD YES
+
+
+the 'core' folder does not provide its own way of 'constructing' the store, because that can differ depending on the environment (server vs client, devo vs prod). up to users of 'core' to assemble the parts they want themselves. maybe they don't want all the reducers.
+
+
+called 'core' or 'store?' redux is called 'store,' but this is more than just the state now.
+so convention, or what I believe to be the proper name? if proper name, will be inconsistent with react-redux bindings.
+

@@ -1,11 +1,5 @@
-this is a folder of /reusable/ components.
+
+maybe this folder is still necessary for universally reusable componetns that cna't be put into 'ui' library, (b/c project specific, depends on certain dependency/tech choices.)
 
 
-difference between reusable and very specific, one-time use components? maybe not?
-
-
-ButtonCompnent....
-
-FortniteComponent...
-
-
+resuable components that are _project-specific_, have dependencies.

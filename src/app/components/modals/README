@@ -1,5 +1,0 @@
-the point of a modal is that it covers up ALL of the UI, it forces attention and removes user control. it blatantly ignores any hierarchy, and THUS are difficult to use correctly from a UX perspective. however, sometimes they have to be used and that's fine.
-
-As such, they should be /treated/ carefully as well. they behave like gods, so they have to be put in a folder that reflects their global nature.
-
-This folder holds the different 'modals' that can be displayed. Other /containers/ (usually) would probably import these modals to display based on some handler function. the components would not know what modals are or want to show them for any reason.

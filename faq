@@ -1,0 +1,39 @@
+
+Lots of design choices. you will disagree with most of them, but you're wrong.
+
+
+typescript
+no
+
+
+semicolons
+no
+
+
+default vs named exports
+in folders, array as default, then named for individual exports. ????
+
+
+javascript fatigue
+stop crying
+
+
+leading commas
+tryna be different
+
+
+folder purpose/exports. only export collection through index, otherwise, if folder is not a 'collection,' but rather a 'package,' then... up to caller/implementor to 'assemble' parts?
+
+
+redux
+/concepts/
+
+react
+first of all, react engine, schedular, etc are pretty state of the art. alternatives don't compete.
+second, the /concepts/ are pretty good too. a 'component' is just function. honestly, what you write is library agnostic if you write well.
+
+
+
+jsx vs hyperscript vs some other markup language?
+tryan be different. html syntax is antiquated? 
+

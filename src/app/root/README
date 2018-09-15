@@ -1,0 +1,67 @@
+this is a folder of /reusable/ components.
+
+
+difference between reusable and very specific, one-time use components? maybe not?
+
+
+ButtonCompnent....
+
+FortniteComponent...
+
+
+should this be at the same level as utils & styles? think a resusable component library?
+
+or maybe some and not all of this folder?
+
+
+
+
+
+so I'm trying something, instead of doing the common 'coponents/shared' folder idea, maybe get rid of that shit.
+
+'root' is not a component, just like 'core' is not a single object. it makes the encompassing 'package' of a critical portion of the application. in this case, 'root' is the root-node of the view hierarchy.
+
+within it, there are 'modals', and other reusable 'flat' components.
+
+??? maybe? maybe it's still more semantic to put resuable components into a 'components' folder.
+
+or maybe.... differnce between domain reusable and building-block reusable. button is building block, goes everywhere. but (specific)modal is special, it goes in root inside 'modals'.
+
+hm.
+
+
+
+okay, so this is feeling better. non-reusable but non-hierarchal components stay here. makes sense, their flat position in the 'root' folder reflects their position/usage in the hierachy.
+
+
+
+
+
+
+domain-specific hierarchal componetns here.
+
+
+
+
+
+
+
+
+
+
+
+
+
+okay, now time to think about "app shell, page shell, hybrid shell" arhcitecture.
+
+
+
+
+appshell gives the user a universal and instnatly-understood controller. they will know to depend on this part of your application. _DOESN'T HAVE TO BE OVERCOMPLICATED OR BLOATED_, just has to be intuitive and _dependable_.
+
+
+
+
+
+
+

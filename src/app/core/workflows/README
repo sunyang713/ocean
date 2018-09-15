@@ -9,4 +9,15 @@ no I think having unitized actions vs higher-level ones is a good idea.
 but maybe there can still be some 'unit' actions taht are asyncrhonous
 
 
-nah so here are the 'side effects'. /react/ to an atomic action.
+nah so here are the 'side effects'. /reactive/ to an atomic action.
+
+
+epics vs sagas. epics are push pattern (push from action --> do some stuff)
+sagas are pull (pull the action I want --> do some stuff). sagas aren't quite as semantic for most stuff because you're simulating a 'listen' activity using pull. put perhaps can still be useful for different kinds of side-effects. side-effects from actions you actively want to pull?
+
+no thunks, or maybe? thunks break the pattern of components only dispatching plain actions. or anyone trying to interact with the store with only plain actions.
+
+promises kind of get away with it because the promise will _eventually resolve_ to a plain action. so it's not the actor's fault exactly.
+
+
+need better name for this folder. or maybe actually use epics, sagas, thunks in separate folders.

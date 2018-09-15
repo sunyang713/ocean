@@ -1,0 +1,6 @@
+files in 'client' are browser specific. may use window, etc.
+
+main.js is entry. Root & Store & others will reach into app directly and pull their desired features manually.
+
+someday, when javascript is actually universal (no window, diff between node and browser), then these kinds of folders/files won't be needed. can direclyt import app from app and everything will just /work/.
+

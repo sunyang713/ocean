@@ -1,3 +1,5 @@
+// should this be in a self-invoking function?
+// what's the pattern for importing side-effect scripts?
 
 if (!window.localStorage) {
   Object.defineProperty(window, "localStorage", new (function () {

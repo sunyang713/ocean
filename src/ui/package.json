@@ -1,11 +1,11 @@
 {
-  "name": "ocean-utils",
+  "name": "ocean-ui",
   "version": "1.0.0",
-  "description": "Utility belt.",
-  "main": "lib/index.js",
+  "description": "Ocean UI",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jonathan Sun",
   "license": "MIT"
 }
