@@ -38,8 +38,8 @@ all component variations depend on styles....
 
 
 import { thing } from 'ui/react'
-import 'ui/css'
-import 'ui/styl'
+import 'ocean-ui/css'
+import 'ocean-ui/stylus'
 
 
 @import 'ui/stylus'

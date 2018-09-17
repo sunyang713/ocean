@@ -1,11 +1,15 @@
 {
   "name": "ocean-utils",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Utility belt.",
-  "main": "lib/index.js",
+  "main": "dist/toolbox.js",
+  "module": "src/index.js",
+  "build": "scripts/build",
   "scripts": {
+    "build": "node scripts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "buid": "test"
 }

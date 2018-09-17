@@ -1,7 +1,7 @@
-import ADD_TODO from 'core/actions/ADD_TODO'
-import TOGGLE_TODO from 'core/actions/TOGGLE_TODO'
-import DELETE_TODO from 'core/actions/DELETE_TODO'
-import reducer from 'core/reducer'
+import ADD_TODO from '../actions/ADD_TODO'
+import TOGGLE_TODO from '../actions/TOGGLE_TODO'
+import REMOVE_TODO from '../actions/REMOVE_TODO'
+import { reducer } from 'ocean-utils'
 
 
 // example will only work well if I can demonstrate that 'todos' state is used in multiple,
@@ -41,10 +41,10 @@ function Todos() {
 }
 
 // memoizing a selector?
-Object.defineProperty(Todos, 'completed', { get: createSelector(
-  () => this.all // will "this" work????
-, todos => todos.filter(t => t.completed)
-)})
+// Object.defineProperty(Todos, 'completed', { get: createSelector(
+//   () => this.all // will "this" work????
+// , todos => todos.filter(t => t.completed)
+// )})
 
 
 export default reducer(Todos, {
@@ -83,16 +83,16 @@ that group of derived variations can go in its own reducer (domain, folder).
 */
 
 // Records are the way to go
-class Todos extends Immutable.Record(initialState) {
-  get visible
-}
+// class Todos extends Immutable.Record(initialState) {
+//   get visible
+// }
 
 
-class Cart extends Immutable.Record({ itemA: 1, itemB: 2 }) {
-  get sum() {
-    return this.itemA + this.itemB
-  }
-}
+// class Cart extends Immutable.Record({ itemA: 1, itemB: 2 }) {
+//   get sum() {
+//     return this.itemA + this.itemB
+//   }
+// }
 
 
 

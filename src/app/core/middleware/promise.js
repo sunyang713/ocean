@@ -1,5 +1,5 @@
 
-import { isPromise } from 'utils'
+import { isPromise } from 'ocean-utils'
 
 // I disagree with promise middleware concept.
 // using promise in the totally wrong way...?

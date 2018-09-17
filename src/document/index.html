@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="<%= locale %>">
+	<head>
+
+		<!-- Basic Page Needs
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<meta charset="utf-8">
+		<title><%= title %></title>
+		<meta name="description" content="<%= description %>">
+		<meta name="author" content="<%= author %>">
+		<meta name="theme-color" content="#000000">
+
+		<!-- Mobile Specific Metas
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Android
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="manifest" href="<%= PUBLIC_URL %>/manifest.json">
+
+		<!-- Favicon ... use generator?
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<% for (var icon of files.stylesheets) { %>
+		<link rel="shortcut icon" href="<%= PUBLIC_URL %>/favicon.ico">
+		<% } %>
+
+		<!-- Custom CSS
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<% for (var stylesheet of files.stylesheets) { %>
+		<link rel="stylesheet" href="<%= stylesheet.src %>" integrity="<%= files.stylesheet.integrity %>" crossorigin="<%= crossOrigin %>" />
+		<% } %>
+
+	</head>
+	<body>
+
+		<!-- Noscript message
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<noscript>
+			You need to enable JavaScript.
+		</noscript>
+
+		<!-- Application mount node
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<div id="root"></div>
+
+		<!-- Runtime Manifest
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<script><%= runtimeManifest %></script>
+
+		<!-- Chunk Manifest
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<script><%= chunkManifest %></script>
+
+		<!-- Application Preloaded State TODO config this
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<script>window.__PRELOADED_STATE__ = <%= preloadedState %></script>
+
+		<!-- Application scripts
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<% for (var script of files.scripts) { %>
+		<script src="<%= script.src %>" integrity="<%= script.integrity %>" crossorigin="<%= crossOrigin %>"></script>
+		<% } %>
+
+	</body>
+</html>

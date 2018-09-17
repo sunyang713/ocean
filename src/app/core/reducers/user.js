@@ -1,7 +1,7 @@
-import DISCOVER_STAR from 'core/actions/DISCOVER_STAR'
-import RETRIEVE_USER from 'core/actions/RETRIEVE_USER'
-import RECEIVE_USER from 'core/actions/RECEIVE_USER'
-import reducer from 'core'
+import DISCOVER_STAR from '../actions/DISCOVER_STAR'
+import RETRIEVE_USER from '../actions/RETRIEVE_USER'
+import RECEIVE_USER from '../actions/RECEIVE_USER'
+import { reducer } from 'ocean-utils'
 
 /*
  * User data model
