@@ -4,7 +4,7 @@ import React from 'react'
 export default function Content(props) {
   return (
     <div>
-      <p>this would be the content based on the router</p>
+      <p>this would be the contasent based on the router</p>
     </div>
   )
 }

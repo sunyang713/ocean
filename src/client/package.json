@@ -1,8 +1,8 @@
 {
   "name": "ocean-client",
   "version": "0.0.0",
-  "main": "dist/client.js",
-  "browser": "src/main.js",
+  "main": "client.js",
+  "browser": "main.js",
   "dependencies": {
     "immutable": "^3.8.2",
     "normalizr": "^3.2.4",

@@ -70,9 +70,6 @@ module.exports = {
 
   plugins: [
 
-    // Clean the build directory.
-    // new CleanWebpackPlugin([resolve('dist', 'static')]),
-
     // Extract and log compilation progress.
     // new webpack.ProgressPlugin(),
 
@@ -89,9 +86,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/document/cra.html'
     }),
-
-    // // Inject secret application variables.
-    // new webpack.EnvironmentPlugin(secrets),
 
     // new I18nPlugin(localisations[locale])
 

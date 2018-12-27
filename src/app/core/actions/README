@@ -43,3 +43,20 @@ I think using immutableJS is a good way to handle state because it makes all sta
 
 as much as possible, do not domain-ize actions. don't think of actions as modifiying an object, that's OOP. not the point of actions, you're limiting the power, flexibility, and /simplicity/ of actions if you do that.
 
+
+
+
+
+
+
+actions idempotent????? TOGGLE vs EXPAND & COLLAPSE
+
+
+
+
+
+
+
+
+
+

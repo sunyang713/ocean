@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Utility belt.",
   "main": "dist/toolbox.js",
-  "module": "src/index.js",
+  "module": "index.js",
   "build": "scripts/build",
   "scripts": {
     "build": "node scripts",
