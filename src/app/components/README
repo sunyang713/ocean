@@ -3,3 +3,10 @@ maybe this folder is still necessary for universally reusable componetns that cn
 
 
 resuable components that are _project-specific_, have dependencies.
+
+
+
+
+
+if reusable, go in here. otherewise, get out.
+no hook ups with anything else, no import ../../../.. no redux state. if redux state is needed for a child comopnent, /prop drill/ that shit. because that means the parent component needed to know about that state idea.

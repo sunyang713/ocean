@@ -14,7 +14,9 @@ module.exports = function build(config, fs = require('fs')) {
   compiler.hooks.beforeCompile.tap('WebpackInfo', compilation => console.log('Compilation starting…'))
   compiler.hooks.afterCompile.tap('WebpackInfo', compilation => console.log('Compilation finished.'))
   return new Promise(
-    (resolve, reject) => compiler.run((error, stats) => error ? reject(error) : resolve(stats))
+    (resolve, reject) => compiler.run(
+      (error, stats) => error ? reject(error) : resolve(stats)
+    )
   ).then(stats => {
     console.log(stats.toString({ colors: true }))
     const info = stats.toJson({ colors: true }) // config???

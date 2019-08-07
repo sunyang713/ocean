@@ -65,3 +65,61 @@ appshell gives the user a universal and instnatly-understood controller. they wi
 
 
 
+
+
+
+
+
+
+
+
+
+
+HOW DO DEAL WITH GLOBAL-STATE/STORE CONNECTION LOGIC:
+
+Parent -> container -> presentationComp
+Parent -> [presentationComp]
+[Parent] -> presentationComp
+Parent -> presentationComp                 some god-level omniscient listener
+
+
+Dismissing children with control:
+
+
+dismissing god:
+that's just dumb.
+
+
+dismissing containers:
+
+the thing is, the container pattern is dumb. in fact, dumb-components are dumb. because it's wrong.
+
+As soon as the store is connected _anywhere_, the entire hierarchy tree from that connection and up to the root are inherently tied to the state, even if they don't have that code. because the connected component knows about state, and any parent component using the connected component is consequently tied to the state too _without consent_. presentation components using containers in their render function is exactly what happens and is dumb, then it's no longer a dumb presentation component. This also dismisses children-with-control pattern, or when every component is a folder and may or may not be connected to the store. You can no longer use the component in its pure form without its connection to the store.
+
+additionally, having a double version of every component is dumb too. A presntation versio of teh component and a 'smart,' connected version of the component. what if you only want to connect some things, but hardcode other things? do you have to create a separate container for that? no that's stupid.
+
+Every component is smart. Every component knows about the store, that's the way to do it. Every component doesn't know whether it's props come from the store or not, but it knows how to connect the store to it's children.
+
+"then the component should be split into smaller components if it needs to use multiple parts of the state" no, stfu.
+
+
+With the 'container' pattern, If components A, B, and C all need access to state.X, then you need CompA, CompAContainer, CompB, CompBContainer, CompC, and CompCContainer. And all three containers would do the exact same thing: inject state.X into the wrapped component.
+
+"then make a gneeric wrapper that injects state.A"
+
+close, but that doesn't work if you take the next step.
+Component A needs state.X and state.Y, comp B need state.Y and state.Z, comp C needs state.X and state.Z, comp D needs State.X, comp E needs state .....
+
+basically number of containers you'd need is the size of the power set of the number of items in your state.
+
+State X, Y, Z ----> [ X, Y, Z, X+Y, X+Z, Y+Z, X+Y+Z ]. Seven generic containers for three pieces of state.
+
+this is assuming your state is flat 'primitives' and you never need to access nested things.
+
+so let's try connecting individually and deliberately. If CompA needs X and Y, give it X and Y directly. no need to genericize and overcomplicate with some middleman container.
+
+All of this is specifically for how to inject state into /reusable components/. For one-off components, this also works just for different reasons. oneoffs get the store stuff directly (?). No need to 'get it from the heavens'.
+
+
+
+
