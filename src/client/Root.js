@@ -11,10 +11,12 @@ import Content from 'ocean-app/root/Content'
 /*
  * Assembly of the Root component.
  * should/can the core be instantiated here?
+ * 
+ * no, core needs to be in main for hmr to properly work.
  */
-export default function Root(props) {
+export default function Root({ core }) {
   return (
-    <Provider store={ props.core }>
+    <Provider store={ core }>
       <BrowserRouter>
         <Shell>
           <Content />

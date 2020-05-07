@@ -37,9 +37,8 @@ more /simplicity/, but /philosophy/.
 
 reduce human error with /design/, not implementation/safety nets.
 
-altering implementation to 'fix' human error (typos) is bullshit. name shit accurately. linters and good programmers fix human errors. not extra implementation/overcomplicated design.
-
-
+altering implementation to 'fix' human error (typos) is bullshit. name shit accurately. linters and good programmers fix
+human errors. not extra implementation/overcomplicated design.
 
 an Advanced (bloated) boilerplate with XXX dependencies (compare with other top boilerplates)
 
@@ -57,7 +56,8 @@ javascript-fatigue ignorant/agnostic.
 
 
 
-each README should have a high=level, top-points design decisions with /brief/ explanations, then more long-winded stuff, then raw notes.
+each README should have a high=level, top-points design decisions with /brief/ explanations, then more long-winded
+stuff, then raw notes.
 
 
 
@@ -154,7 +154,8 @@ leading commas
 tryna be different
 
 
-folder purpose/exports. only export collection through index, otherwise, if folder is not a 'collection,' but rather a 'package,' then... up to caller/implementor to 'assemble' parts?
+folder purpose/exports. only export collection through index, otherwise, if folder is not a 'collection,' but rather a
+'package,' then... up to caller/implementor to 'assemble' parts?
 
 
 redux
@@ -162,7 +163,8 @@ redux
 
 react
 first of all, react engine, schedular, etc are pretty state of the art. alternatives don't compete.
-second, the /concepts/ are pretty good too. a 'component' is just function. honestly, what you write is library agnostic if you write well.
+second, the /concepts/ are pretty good too. a 'component' is just function. honestly, what you write is library agnostic
+if you write well.
 
 
 
@@ -176,7 +178,8 @@ why gulp vs npm scripts
 
 
 why no css/styles in react components? why only css-in-js solution?
-Would like to use ideal styling principles, reusing rules, semantics, etc. not hacks, one-time appplications, etc. use css-in-js for dynamic styles that require logic, but that's all you should really need. but probs not, so i dunno.
+Would like to use ideal styling principles, reusing rules, semantics, etc. not hacks, one-time appplications, etc. use
+css-in-js for dynamic styles that require logic, but that's all you should really need. but probs not, so i dunno.
 
 
 why stylus vs sscs

@@ -4,7 +4,7 @@ import { createStore } from 'redux'
 import { applyMiddleware } from 'redux'
 import * as reducers from 'ocean-app/core/reducers'
 import * as middleware from 'ocean-app/core/middleware'
-// import DevTools from 'app/components/DevTools'
+// import DevTools from 'ocean-app/components/DevTools'
 // import { getDebugSessionKey } from './getDebugSessionKey'
 // import { persistState } from 'redux-devtools'
 import { compose } from 'ocean-utils'
@@ -21,6 +21,7 @@ export default function Core() {
   // Get the preloaded application state.
   const preloadedState = undefined
   // const preloadedState = fromJS(window.__PRELOADED_STATE__)
+  // Can I do this w/o fromJS? idiomatically, and converting to records?
   // delete window.__PRELOADED_STATE__
 
   // Get the application store enhancer.

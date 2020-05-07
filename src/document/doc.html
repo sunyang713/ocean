@@ -5,9 +5,9 @@
 		<!-- Basic Page Needs
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<meta charset="utf-8">
-		<title><%= title %></title>
-		<meta name="description" content="<%= description %>">
-		<meta name="author" content="<%= author %>">
+		<title>孙洋</title>
+		<meta name="description" content="Up to no good.">
+		<meta name="author" content="Jonathan Sun">
 		<meta name="theme-color" content="#000000">
 
 		<!-- Mobile Specific Metas
@@ -26,14 +26,14 @@
 
 		<!-- Favicon ... use generator?
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<% for (var icon of files.stylesheets) { %>
+		<% for (var icon of icons) { %>
 		<link rel="shortcut icon" href="<%= PUBLIC_URL %>/favicon.ico">
 		<% } %>
 
 		<!-- Custom CSS
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<% for (var stylesheet of files.stylesheets) { %>
-		<link rel="stylesheet" href="<%= stylesheet.src %>" integrity="<%= files.stylesheet.integrity %>" crossorigin="<%= crossOrigin %>" />
+		<% for (var stylesheet of stylesheets) { %>
+		<link rel="stylesheet" href="<%= stylesheet.src %>" integrity="<%= stylesheet.integrity %>" crossorigin="<%= crossOrigin %>" />
 		<% } %>
 
 	</head>
@@ -45,7 +45,7 @@
 			Please enable JavaScript.
 		</noscript>
 
-		<!-- Application mount node
+		<!-- Application mount node maybe 'content' with random string?
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<div id="root"></div>
 
@@ -64,6 +64,15 @@
 		<!-- Application scripts
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<% for (var script of files.scripts) { %>
+		<script src="<%= script.src %>" integrity="<%= script.integrity %>" crossorigin="<%= crossOrigin %>"></script>
+		<% } %>
+
+
+		<% for (var script of inlinedScripts) { %>
+		<script><%= script %></script>
+		<% } %>
+
+		<% for (var script of scriptFiles) { %>
 		<script src="<%= script.src %>" integrity="<%= script.integrity %>" crossorigin="<%= crossOrigin %>"></script>
 		<% } %>
 

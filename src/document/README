@@ -1,0 +1,29 @@
+I want to isolate and focus the build of the 'HTML document' because there are some cool non-trivial things you can do.
+
+This is usually handled by html-webpack-plugin + like 80 plugins to the plugin. that's the easy way, not pretty, not
+elegant.
+
+We basically want to abstract the website from the application software and the housing/containing document. Application
+can be slapped into any compliant document, document can handle any application given it's detailed parameters.
+
+basically gonna be one super function. hopefully simple, but we'll see.
+
+
+need a /templating engine/ This is basically it's own project.
+
+react + jsx empahsis is on the javascript and all that fancy stuff, so not necessary here. Same with Vue. Can't stick
+with just pure html because we need some interpolation. so probably something like ejs or pug. ejs seems the best for
+now.
+
+
+don't forget to minify etc
+
+
+weird part of injecting webpack manifest & runtime, b/c I don't think the document should actually be aware of that,
+only the builder for the document.
+
+
+
+.....and as always... how the fuck do you handle public path...?
+
+
